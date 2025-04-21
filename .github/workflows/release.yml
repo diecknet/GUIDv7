@@ -42,12 +42,10 @@ jobs:
         run: |
           $ErrorActionPreference = 'Stop'
           ./.github/Build-Module.ps1
-      - name: test what is going on
+      - name: Register PowerShell Gallery as Repository
         shell: pwsh
         run: |
-          ls
-          ls ./GUIDv7
-          $PSVersionTable
+          Register-PSResourceRepository -PSGallery
       - name: Publish to PowerShell Gallery
         shell: pwsh
         run: |
