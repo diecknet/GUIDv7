@@ -12,7 +12,7 @@
 # RootModule = ''
 
 # Version number of this module.
-ModuleVersion = '0.0.2'
+ModuleVersion = '0.0.3'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -98,7 +98,7 @@ PrivateData = @{
         # Tags = @()
 
         # A URL to the license for this module.
-        LicenseUri = 'https://github.com/diecknet/GUIDv7/blob/main/LICENSE'
+        LicenseUri = 'https://github.com/diecknet/GUIDv7/blob/main/LICENSE.md'
 
         # A URL to the main website for this project.
         ProjectUri = 'https://github.com/diecknet/GUIDv7'
