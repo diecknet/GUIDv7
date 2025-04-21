@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'src/GUIDv7/GUIDv7.psd1'
   workflow_dispatch:
 jobs:
   release:
