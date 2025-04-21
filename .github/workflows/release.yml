@@ -14,7 +14,7 @@ jobs:
         shell: pwsh
         run: |
           $ErrorActionPreference = 'Stop'
-          ./Build-Module.ps1
+          ./.github/Build-Module.ps1
       - name: Publish to PowerShell Gallery
         uses: natescherer/publish-powershell-action@0ca93e133f1cf68a79cbc94287dc31887534b401
         with:
