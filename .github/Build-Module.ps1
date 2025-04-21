@@ -6,11 +6,13 @@ to include these functions for export.
 
 $AllPublicFunctions = Get-ChildItem "./src/functions/public" -Filter "*.ps1"
 $ModuleName = "GUIDv7"
-$ModulePath = "./src/$ModuleName.psm1"
-$ModuleManifestPath = "./src/$ModuleName.psd1"
+$ModulePath = "./GUIDv7/$ModuleName.psm1"
+$ModuleManifestPath = "./GUIDv7/$ModuleName.psd1"
 
 $FunctionsToExport = New-Object "System.Collections.Generic.List[Object]"
 
+# remove the module file if it exists
+Remove-Item -Path $ModulePath -Force -ErrorAction SilentlyContinue
 
 # copy all functions to the module file (.psm1)
 foreach($PublicFunction in $AllPublicFunctions) {

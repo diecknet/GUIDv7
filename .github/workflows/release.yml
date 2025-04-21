@@ -1,0 +1,23 @@
+name: Release to PowerShell Gallery
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  jobs:
+    release:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+        - name: Run Build-Module.ps1 script
+          shell: pwsh
+          run: |
+            $ErrorActionPreference = 'Stop'
+            ./Build-Module.ps1
+        - name: Publish to PowerShell Gallery
+                uses: natescherer/publish-powershell-action@v0ca93e133f1cf68a79cbc94287dc31887534b401
+                with:
+                  token: ${{ secrets.GALLERY_API_KEY }}
+                  target: gallery
+                  path: GUIDv7
