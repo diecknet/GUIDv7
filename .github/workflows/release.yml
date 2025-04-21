@@ -16,8 +16,8 @@ on:
             $ErrorActionPreference = 'Stop'
             ./Build-Module.ps1
         - name: Publish to PowerShell Gallery
-                uses: natescherer/publish-powershell-action@v0ca93e133f1cf68a79cbc94287dc31887534b401
-                with:
-                  token: ${{ secrets.GALLERY_API_KEY }}
-                  target: gallery
-                  path: GUIDv7
+          uses: natescherer/publish-powershell-action@v0ca93e133f1cf68a79cbc94287dc31887534b401
+          with:
+            token: ${{ secrets.GALLERY_API_KEY }}
+            target: gallery
+            path: GUIDv7
