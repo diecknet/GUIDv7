@@ -43,8 +43,6 @@ jobs:
           $ErrorActionPreference = 'Stop'
           ./.github/Build-Module.ps1
       - name: Publish to PowerShell Gallery
-        uses: natescherer/publish-powershell-action@0ca93e133f1cf68a79cbc94287dc31887534b401
-        with:
-          token: ${{ secrets.GALLERY_API_KEY }}
-          target: gallery
-          path: GUIDv7
+        shell: pwsh
+        run: |
+          Publish-PSResource -Path ./GUIDv7 -Repository PSGallery -APIKey ${{ secrets.GALLERY_API_KEY }}
