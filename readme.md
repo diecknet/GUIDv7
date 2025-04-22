@@ -11,6 +11,11 @@ The module is [available from the PowerShell Gallery](https://www.powershellgall
 Install-PSResource GUIDv7
 ```
 
+## Demo / Videos
+
+There is a longer German Video here: <https://youtu.be/mE4cZlL_4Xc>  
+And a shorter English Video here: <https://www.youtube.com/shorts/9E6xtKzKy0I> (⚠️ Vertical Video Warning ⚠️)
+
 ## Usage examples
 
 ### Example 1: Generate a GUIDv7 based on the current date/time
